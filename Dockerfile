@@ -6,6 +6,8 @@ ENV PRE_CREATE_DB **None**
 ENV INFLUXDB_INIT_USER root
 ENV INFLUXDB_INIT_PWD root
 
+RUN apt-get update
+
 # Install Influx
 RUN apt-get install -y wget
 RUN wget http://influxdb.s3.amazonaws.com/influxdb_0.9.0_amd64.deb
@@ -18,6 +20,9 @@ RUN apt-get install -y adduser libfontconfig
 RUN wget https://grafanarel.s3.amazonaws.com/builds/grafana_2.0.2_amd64.deb
 RUN sudo dpkg -i grafana_2.0.2_amd64.deb
 
+# Install supervisor
+
+RUN apt-get install supervisor
 
 EXPOSE 80
 EXPOSE 8083
