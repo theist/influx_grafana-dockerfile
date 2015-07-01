@@ -23,7 +23,7 @@ RUN rm grafana_2.0.2_amd64.deb
 
 # Install supervisor
 
-RUN apt-get install supervisor
+RUN apt-get install -y supervisor
 
 EXPOSE 80
 EXPOSE 8083
