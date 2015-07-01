@@ -22,7 +22,7 @@ RUN wget https://grafanarel.s3.amazonaws.com/builds/grafana-2.1.0-pre1.linux-x64
 RUN tar -vxzf grafana-2.1.0-pre1.linux-x64.tar.gz
 RUN rm grafana-2.1.0-pre1.linux-x64.tar.gz
 RUN mv grafana-2.1.0-pre1 /opt/grafana
-ADD grafana.ini /etc/grafana/grafana.ini
+ADD grafana.ini /opt/grafana/conf/grafana.ini
 
 # Install supervisor
 
