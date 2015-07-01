@@ -13,6 +13,7 @@ RUN apt-get install -y wget
 RUN wget http://influxdb.s3.amazonaws.com/influxdb_0.9.0_amd64.deb
 RUN dpkg -i influxdb_0.9.0_amd64.deb
 RUN rm influxdb_0.9.0_amd64.deb
+ADD influxdb.conf /etc/opt/influxdb/influxdb.conf
 
 # Install Grafana
 
