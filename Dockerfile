@@ -18,9 +18,10 @@ ADD influxdb.conf /etc/opt/influxdb/influxdb.conf
 # Install Grafana
 
 RUN apt-get install -y adduser libfontconfig
-RUN wget https://grafanarel.s3.amazonaws.com/builds/grafana_2.0.2_amd64.deb
-RUN sudo dpkg -i grafana_2.0.2_amd64.deb
-RUN rm grafana_2.0.2_amd64.deb
+RUN wget https://grafanarel.s3.amazonaws.com/builds/grafana-2.1.0-pre1.linux-x64.tar.gz
+RUN tar -vxzf grafana-2.1.0-pre1.linux-x64.tar.gz
+RUN rm grafana-2.1.0-pre1.linux-x64.tar.gz
+RUN mv grafana-2.1.0-pre1 /opt/grafana
 ADD grafana.ini /etc/grafana/grafana.ini
 
 # Install supervisor
