@@ -27,6 +27,7 @@ ADD grafana.ini /opt/grafana/conf/grafana.ini
 # Install supervisor
 
 RUN apt-get install -y supervisor
+ADD supervisor.conf /etc/supervisor/supervisord.conf
 
 EXPOSE 80
 EXPOSE 8083
