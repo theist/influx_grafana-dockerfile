@@ -20,6 +20,7 @@ RUN apt-get install -y adduser libfontconfig
 RUN wget https://grafanarel.s3.amazonaws.com/builds/grafana_2.0.2_amd64.deb
 RUN sudo dpkg -i grafana_2.0.2_amd64.deb
 RUN rm grafana_2.0.2_amd64.deb
+ADD grafana.ini /etc/grafana/grafana.ini
 
 # Install supervisor
 
